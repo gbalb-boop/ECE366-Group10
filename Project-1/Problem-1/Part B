@@ -2,7 +2,7 @@ module one_bit_full_adder(A, B, Cin, S,Cout);
 
  input A, B, Cin;
  output S, Cout;
-  wire= w1,w2,w3;
+  wire w1,w2,w3;
   xor g1(w1,A,B);
   xor g2(S, w1,Cin);
   and g3(w2,A,b);
