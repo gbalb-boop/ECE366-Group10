@@ -1,3 +1,4 @@
+
 module CLA(A, B, Cin, S, Cout);
   input [31:0] A, B;
   input Cin;
@@ -11,6 +12,15 @@ module CLA(A, B, Cin, S, Cout);
   wire [7:0] rca_Cout;
   assign C[0] = Cin;
   assign Cout = C[8];
+
+  // Generate and propgate for each 4 bit block
+  wire [7:0] G0, P0;
+  wire [7:0] G1, P1;
+  wire [7:0] G2, P2;
+  wire [7:0] G3, P3;
+
+  wire [7:0] t1, t2, t3;
+  wire [7:0] carry_temp;
 
   genvar i;
   generate
@@ -27,18 +37,56 @@ module CLA(A, B, Cin, S, Cout);
       cla4_carry carry_logic(
         .A(A[4*i +: 4]),
         .B(B[4*i +: 4]),
-        .Cin(C[i]),
-        .Cout(C[i+1])
+        .Gout(G0[i]),
+        .Pout(P0[i])
       );
+
+      // first stage
+      if (i >= 1) begin
+        and s1a(t1[i], P0[i], G0[i-1]);
+        or  s1b(G1[i], G0[i], t1[i]);
+        and s1c(P1[i], P0[i], P0[i-1]);
+      end
+      else begin
+        assign G1[i] = G0[i];
+        assign P1[i] = P0[i];
+      end
+
+      // second stage
+      if (i >= 2) begin
+        and s2a(t2[i], P1[i], G1[i-2]);
+        or  s2b(G2[i], G1[i], t2[i]);
+        and s2c(P2[i], P1[i], P1[i-2]);
+      end
+      else begin
+        assign G2[i] = G1[i];
+        assign P2[i] = P1[i];
+      end
+
+      // third stage
+      if (i >= 4) begin
+        and s3a(t3[i], P2[i], G2[i-4]);
+        or  s3b(G3[i], G2[i], t3[i]);
+        and s3c(P3[i], P2[i], P2[i-4]);
+      end
+      else begin
+        assign G3[i] = G2[i];
+        assign P3[i] = P2[i];
+      end
+
+      // Carry out of each block
+      and c0(carry_temp[i], P3[i], Cin);
+      or  c1(C[i+1], G3[i], carry_temp[i]);
+      
     end
   endgenerate
 
 endmodule
 
-module cla4_carry(A, B, Cin, Cout);
+module cla4_carry(A, B, Gout, Pout);
   input [3:0] A, B;
-  input Cin;
-  output Cout;
+  output Gout;
+  output Pout;
   
   // Generate & Propagate Signals
   wire [3:0] G;
@@ -56,7 +104,6 @@ module cla4_carry(A, B, Cin, Cout);
   wire pp01;
   wire pp23;
   wire block_P;
-  wire propagated_carry;
   
   // Gi = Ai & Bi
   and g0(G[0], A[0], B[0]);
@@ -87,9 +134,9 @@ module cla4_carry(A, B, Cin, Cout);
   and bp1(pp23, P[2], P[3]);
   and bp2(block_P, pp01, pp23);
   
-  // Carry out
-  and c0(propagated_carry, block_P, Cin);
-  or  c1(Cout, block_G, propagated_carry);
+  // Outputs for each 4 bit block
+  assign Gout = block_G;
+  assign Pout = block_P;
 
 endmodule
 
