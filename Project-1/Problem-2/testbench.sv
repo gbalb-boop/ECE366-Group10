@@ -1,3 +1,4 @@
+
 module tb_CLA;
   reg [31:0] A;
   
@@ -57,7 +58,6 @@ module tb_CLA;
     
     // test Cin
     run_test(32'h00000005,32'h00000003,1,33'h000000009,"Cin test");
-    
     $finish;
   end
 endmodule
