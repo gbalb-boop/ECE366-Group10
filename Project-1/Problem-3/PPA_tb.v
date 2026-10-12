@@ -33,7 +33,6 @@ module PPA_tb;
         $display("A = %d, B = %d, Cin = %b, S = %d, Cout = %b",
                   A, B, Cin, S, Cout);
 
-
         // bigger numbers
         // 25 + 17 = 42
         A = 16'd25;
@@ -44,7 +43,6 @@ module PPA_tb;
         $display("Test 2: 25 + 17");
         $display("A = %d, B = %d, Cin = %b, S = %d, Cout = %b",
                   A, B, Cin, S, Cout);
-
 
         // test Cin
         // 10 + 20 + 1 = 31
@@ -57,7 +55,6 @@ module PPA_tb;
         $display("A = %d, B = %d, Cin = %b, S = %d, Cout = %b",
                   A, B, Cin, S, Cout);
 
-
         // carry through several bits
         // 255 + 1 = 256
         A = 16'd255;
@@ -69,7 +66,6 @@ module PPA_tb;
         $display("A = %d, B = %d, Cin = %b, S = %d, Cout = %b",
                   A, B, Cin, S, Cout);
 
-
         // final carry-out
         // FFFF + 1 = 10000
         A = 16'hFFFF;
@@ -80,7 +76,6 @@ module PPA_tb;
         $display("Test 5: FFFF + 1");
         $display("A = %h, B = %h, Cin = %b, S = %h, Cout = %b",
                   A, B, Cin, S, Cout);
-
 
         // signed number
         // -5 + 3 = -2
