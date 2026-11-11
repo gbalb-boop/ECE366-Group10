@@ -14,7 +14,7 @@
 - **Member 4:** - **Report Coordinator**: I organized and prepared Progress Report 1 by creating a shared document for my teammates to record their work and contributions. I collected the necessary information for the README, including team member details, individual contributions, GitHub repository link, and instructions for running the Fibonacci MIPS program. I also helped coordinate the required files and made sure the submission was organized according to the project guidelines.
 
 # 3. GitHub Repository
-[Insert GitHub repository link]
+https://github.com/gbalb-boop/ECE366-Group10 
 
 # 4. Instructions to Run the Program
 1. Open the MARS MIPS simulator.
