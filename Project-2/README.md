@@ -11,7 +11,7 @@
 - **Member 1:** - **Part A**: [Describe what u completed]
 - **Member 2:** - **Part B**: [Describe what u completed, if anything]
 - **Member 3:** - **Part C**: [Describe what u completed, if anything]
-- **Member 4:** 
+- **Member 4:** - **Report Coordinator**: I organized and prepared Progress Report 1 by creating a shared document for my teammates to record their work and contributions. I collected the necessary information for the README, including team member details, individual contributions, GitHub repository link, and instructions for running the Fibonacci MIPS program. I also helped coordinate the required files and made sure the submission was organized according to the project guidelines.
 
 # 3. GitHub Repository
 [Insert GitHub repository link]
