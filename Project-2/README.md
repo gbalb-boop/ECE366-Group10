@@ -16,10 +16,39 @@
 # 3. GitHub Repository
 https://github.com/gbalb-boop/ECE366-Group10 
 
-# 4. Instructions to Run the Program
-1. Open the MARS MIPS simulator.
-2. Open the `Fibonacci.asm` file.
-3. [Explain how to set or change the input n.]
-4. Assemble the program.
-5. Run the program.
-6. [Explain where to find the calculated Fibonacci number in memory.]
+
+
+## 4. How to Run the Fibonacci Program
+
+1. Download and open the MARS MIPS Simulator.
+
+2. In MARS, select File > Open.
+
+3. Navigate to the Project-2 folder and open
+   `Part-A fibonacci.asm`.
+
+4. To change the input, locate this line in the .data section:
+
+   n: .word 10
+
+   Replace 10 with the desired nonnegative integer.
+
+5. Select Run > Assemble (F3) to assemble the program.
+
+6. Select Run > Go (F5) to execute the program.
+
+7. After execution, view the Data Segment in MARS.
+
+8. Find the memory location labeled `result`. This
+   location contains the calculated Fibonacci number.
+
+### Example
+
+Input: n = 10
+
+Expected result: Fibonacci(10) = 55
+
+The program stores the value 55 in the result memory
+location rather than printing it to the console.
+
+Note: Reassemble the program after changing the input.
