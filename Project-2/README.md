@@ -8,16 +8,15 @@
 - **Member 4:** [Julia] — [jpech4]
 
 # 2. Individual Contributions
-- **Member 1:** - **Part A**: [Describe what u completed]
-- **Member 2:** - **Part B**: [Describe what u completed, if anything]
-- **Member 3:** - **Part C**: [Created file to start Part C]
+- **Member 1:** - **Part A**: Lina worked on Part A by writing the MIPS assembly code to calculate the nth Fibonacci number. She translated the given pseudocode into assembly using registers and a loop. For testing, she provided test cases using different input values (0, 1, 2, 5, 10, and 20) to check the program's accuracy. Her testing procedure involved running the code in the MARS simulator and checking the result stored in the Data Segment against the expected Fibonacci number.
+- **Member 2:** - **Part B**: [Describe what you completed, if anything]
+- **Member 3:** - **Part C**: Created file to start Part C
 - **Member 4:** - **Report Coordinator**: I organized and prepared Progress Report 1 by creating a shared document for my teammates to record their work and contributions. I collected the necessary information for the README, including team member details, individual contributions, GitHub repository link, and instructions for running the Fibonacci MIPS program. I also helped coordinate the required files and made sure the submission was organized according to the project guidelines.
 
 # 3. GitHub Repository
 https://github.com/gbalb-boop/ECE366-Group10 
 
-
-## 4. How to Run the Fibonacci Program
+# 4. How to Run the Fibonacci Program
 
 1. Download and open the MARS MIPS Simulator.
 
