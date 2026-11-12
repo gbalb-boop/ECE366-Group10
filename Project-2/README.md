@@ -17,7 +17,6 @@
 https://github.com/gbalb-boop/ECE366-Group10 
 
 
-
 ## 4. How to Run the Fibonacci Program
 
 1. Download and open the MARS MIPS Simulator.
