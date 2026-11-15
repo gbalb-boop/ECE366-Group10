@@ -3,7 +3,7 @@
 
 # 1. Team Members
 - **Member 1:** [Lina] — [NetID]
-- **Member 2:** [Gabriel] — [NetID]
+- **Member 2:** [Gabriel] — [gbalb]
 - **Member 3:** [Adam] — [amroz6]
 - **Member 4:** [Julia] — [jpech4]
 
