@@ -2,7 +2,7 @@
 # FINAL PROGRESS REPORT
 
 # 1. Team Members
-- **Member 1:** [Lina] — [NetID] ***PLEASE PUT UR NET ID***
+- **Member 1:** [Lina] — [glahi] ***PLEASE PUT UR NET ID***
 - **Member 2:** [Gabriel] — [gbalb]
 - **Member 3:** [Adam] — [amroz6]
 - **Member 4:** [Julia] — [jpech4]
