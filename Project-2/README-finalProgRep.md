@@ -11,7 +11,7 @@
 - **Member 1 – Part A:** Lina worked on Part A by writing the MIPS assembly code to calculate the nth Fibonacci number. She translated the given pseudocode into assembly using registers and a loop. For testing, she provided test cases using different input values (0, 1, 2, 5, 10, and 20) to check the program's accuracy. Her testing procedure involved running the code in the MARS simulator and checking the result stored in the Data Segment against the expected Fibonacci number.
 - **Member 2 – Part B:** Gabriel wrote the MIPS assembly code to determine whether a given number is odd or even. The program uses a loop to repeatedly subtract 2 until the remaining value is less than 2. It then checks the remainder and stores 1 if the number is odd or 0 if it is even. He tested the program in MARS using inputs of 7 and 8, and both produced the expected results.
 - **Member 3 – Part C:** Adam combined the Fibonacci and IsOdd functions into the final IsFibonacciOdd program. He implemented the main function to load the input from memory, check whether the nth Fibonacci number is odd or even, and store the result in memory.
-- **Member 4 – Report Coordinator:** 
+- **Member 4 – Report Coordinator:** Julia was responsible for organizing and writing Progress Reports. She worked on the README files, explained how the MIPS code works, wrote the instructions for running the programs, documented the test cases, and helped prepare the files for submission
 
 # 3. GitHub Repository
 https://github.com/gbalb-boop/ECE366-Group10 
